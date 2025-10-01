@@ -1,0 +1,85 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "/src/styles/about.css";
+---
+
+<BaseLayout currentPage="about">
+    <main class="container-fluid p-0">
+        <!-- Introducción -->
+        <section class="d-flex align-items-center text-light position-relative" style="min-height: 90vh;">
+            <div class="container">
+                <div class="row align-items-center flex-column-reverse flex-md-row">
+                
+                <!-- Texto -->
+                <div class="col-md-6 text-md-start text-center px-md-4 order-2 order-md-1">
+                    <h1 class="fw-bold gradient mb-3">Hola, soy Angel 🚀</h1>
+                    <p class="lead mb-4">
+                        Soy estudiante de Ingeniería de Sistemas, apasionado por el desarrollo full-stack y machine learning, creando soluciones innovadoras y accesibles que impacten positivamente.
+                    </p>
+                    <p class="fst-italic">
+                        "Programar no solo es escribir código, es transformar ideas en soluciones reales."
+                    </p>
+                </div>
+                <!-- Imagen -->
+                <div class="col-md-6 text-center mb-4 mb-md-0 order-1 order-md-2 ">
+                    <img src="images/angelphoto.jpeg" alt="Foto de Angel"
+                        class="img-fluid rounded-circle shadow-lg"
+                        style="max-width: 250px; aspect-ratio: 1/1; object-fit: cover;">
+                </div>
+            </div>
+            <!-- Scroll Down -->
+            <div class="position-absolute bottom-0 start-50 translate-middle-x mb-5 scroll-down d-none d-md-block" data-target="conoceme"></div>
+        </section>
+        <!-- Sección Conóceme -->
+        <section id="conoceme" class="info-section-custom text-left py-5 ">
+            <div class="row g-4 mt-3">
+            <!-- Columna izquierda (Card 1, Card 2, Card 4) -->
+                <div class="col-md-8">
+                    <div class="row g-4">
+                        <!-- Card 1 -->
+                        <div class="col-md-6">
+                            <div class="card-custom px-3 d-flex flex-column mb-3">
+                            <img src="images/grid1.png" alt="card_image" class="mx-auto">
+                            <h1>Mi enfoque</h1>
+                            <p>Creo soluciones web y aplicaciones accesibles, combinando diseño intuitivo con código eficiente y limpio.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-6">
+                            <div class="card-custom px-3 d-flex flex-column mb-3">
+                            <img src="images/grid2.png" alt="card_image" class="mb-3 mx-auto">
+                            <h1>Pila Tecnológica</h1>
+                            <p>Desarrollador web con experiencia en React, Node.js, Java y Python, 
+                                usando Git/GitHub para proyectos.</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 (abajo, ocupa las 8 col) -->
+                        <div class="col-12">
+                            <div class="card-custom px-3 d-flex flex-column">
+                                <img src="images/grid4.png" alt="card_image" class="mb-3 mx-auto">
+                                <h1>Mi pasión por el código</h1>
+                                <p>Me encanta programar porque me permite resolver problemas y crear soluciones mediante el código convirtiéndose en una pasión que me motiva a explorar nuevas tecnologías y mejorar mis habilidades.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Columna derecha (Card 3) -->
+                <div class="col-md-4 ">
+                    <div class="card-custom h-100 px-3 d-flex flex-column">
+                        <video autoplay loop muted playsinline class="mb-3" aria-label="Video de presentación de formación">
+                            <source src="/videos/glob.mp4" type="video/mp4" />
+                            Tu navegador no soporta video.
+                          </video>                                         
+                        <h4>Formación</h4>
+                        <p>Estudiante de Ingeniería de Sistemas e Informática en la Universidad Continental<br>
+                        </p>
+                        <button class="btn btn-outline-light my-3 align-self-start" onclick="window.location.href='contact.html'">
+                            <i class='bx bx-link-external'></i> Contáctame!
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main> 
+</BaseLayout>
+

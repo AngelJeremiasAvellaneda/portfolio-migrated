@@ -1,0 +1,30 @@
+.my-projects {
+    position: relative;
+    width: 100%;
+    margin-top: 80px;   
+    margin-bottom: 250px; 
+}
+.project-vidbox video {
+    width: 90%;          
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px lightgray;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.project-vidbox video:hover {
+    box-shadow: 0 0 20px lightgray;
+}
+.project-btn {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #727fdeb4;
+    background-color: #2200493d;
+    box-shadow: 0 0 5px #727fde86;
+    transition: 0.3s;
+}
+.project-btn:hover {
+    box-shadow: 0 0 15px #727fde86;
+    opacity: 0.8;
+}

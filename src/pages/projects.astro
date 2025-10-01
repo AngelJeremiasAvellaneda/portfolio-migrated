@@ -1,0 +1,41 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "/src/styles/projects.css";
+---
+
+<BaseLayout currentPage="projects"> 
+    <main class="container-fluid p-0">
+        <!-- Mis Proyectos -->
+        <section class="my-projects container py-5">
+            <h1 class="section-title text-center mb-5">Mis Proyectos 👨‍💻</h1>
+            <!-- Proyecto 1 -->
+            <div class="row align-items-center mb-5 flex-column flex-lg-row">
+                <div class="col-12 col-lg-6 mb-3 mb-lg-0 d-flex justify-content-center">
+                    <div class="project-vidbox">
+                        <video src="videos/project1.mp4" autoplay muted loop playsinline aria-label="Video del proyecto Sistema de Reservas Online"></video>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center text-center text-lg-start">
+                    <h2 class="fw-bold mb-3">Sistema de Reservas Online en Java</h2>
+                    <p>Desarrollé un programa en Java para la gestión de reservas en línea en el restaurante Long Horn. El sistema permite administrar mesas y horarios de manera eficiente, mejorando la experiencia del cliente y facilitando la organización interna del restaurante.</p>
+                    <button class="btn project-btn mt-3" title="Ver proyecto Sistema de Reservas Online"><i class='bx bx-link-external'></i> WebSite</button>
+                </div>
+            </div>
+            <!-- Proyecto 2 -->
+            <div class="row align-items-center mb-5 flex-column flex-lg-row">
+                <div class="col-12 col-lg-6 mb-3 mb-lg-0 d-flex justify-content-center order-lg-2">
+                    <div class="project-vidbox">
+                        <video src="videos/project2.mp4" autoplay muted loop playsinline aria-label="Video del proyecto Dashboard Empresarial en Power BI"></video>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 d-flex flex-column justify-content-center text-center text-lg-start order-lg-1">
+                    <h2 class="fw-bold mb-3">Dashboard Empresarial en Power BI</h2>
+                    <p>Implementé un dashboard interactivo en Power BI para la empresa ficticia Appol. El tablero presenta indicadores clave de desempeño (KPI), métricas de ventas y visualizaciones dinámicas que permiten un análisis claro para apoyar la toma de decisiones.</p>
+                    <button class="btn project-btn mt-3" title="Ver proyecto Dashboard Empresarial en Power BI"><i class='bx bx-link-external'></i> WebSite</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</BaseLayout>
+
+

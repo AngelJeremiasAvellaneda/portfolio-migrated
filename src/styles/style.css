@@ -1,0 +1,158 @@
+/*Animacion de Degradado*/
+.gradient{
+    color: #008baa; /* fallback */
+    background:  linear-gradient(to right, #008baa, #7e42a7, #6600c5, #6070fd, #2a46ff, #0099ff, #008ead);
+    background-size: 400% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 8s ease infinite;
+}
+@keyframes animate-gradient {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+body{
+    width: 100%;
+    gap: 100px;
+    background-color: #001f7c38;
+    color: lightgrey;
+}
+/* El main crece para ocupar el espacio disponible */
+main {
+    width: 100%;
+}
+/* ====== HEADER ====== */
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    background-color: rgba(255, 255, 255, 0.123);
+    backdrop-filter: blur(10px);
+}
+/* ===== SCROLL-DOWN ===== */
+.scroll-down{
+    position: relative;
+    height: 50px;
+    width: 30px;
+    border: 2px solid lightgray;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(211, 211, 211, 0.477);
+}
+.scroll-down:active {
+    transform: translateY(5px); /* Baja un poquito al presionarlo */
+    transition: transform 0.1s ease-in-out;
+}
+.scroll-down::before,
+.scroll-down::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    border: 2px solid lightgray;
+    border-top: transparent;
+    border-left: transparent;
+    transform: translate(-50%, -100%) rotate(45deg);
+    animation: scroll-down 2s ease-in-out infinite;
+}
+.scroll-down::before{
+    animation-delay: 0.5s;
+}
+@keyframes scroll-down {
+    0%{
+        top: 20%;
+        opacity: 0;
+    }
+    30%, 60%{
+        opacity: 1;
+    }
+    100%{
+        top: 90%;
+        opacity: 0;
+    }
+}
+
+/* Menu */
+.menu-custom {
+    border-radius: 50px;
+    background-color: rgba(0, 0, 69, 0.30);
+    box-shadow: 0 0 10px #727fde65;
+}
+.menu-custom a{
+    color: white;
+    font-weight: 700;
+    margin: 0 10px;
+}
+.navbar-toggler {
+    border: none;
+}
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+.navbar .menu-custom .nav-link {
+    color: #fff;
+    font-weight: 600; 
+    padding: 8px 18px;
+    border-radius: 25px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.navbar .menu-custom .nav-link:hover {
+    background-color: rgba(114, 127, 222, 0.3);
+    color: #d8d7e0;
+}
+.navbar .menu-custom .nav-link.active {
+    background-color: rgba(114, 127, 222, 0.6);
+    color: #fff;
+}
+/* Redes Sociales*/
+.navbar .networks-custom a {
+    border: 1px solid #727fde;
+    border-radius: 50%;
+    text-decoration: none;
+    color: lightgray;
+    transition: 0.3s;
+    font-size: 1.3rem;
+    display: flex;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.navbar .networks-custom a:hover {
+    transform: scale(1.2);
+    background-color: #727fde;
+    color: rgb(252, 22, 22);
+    box-shadow: 0 0 15px #727fde6f;
+}
+/* Ocultar videos pesados en móviles */
+@media (max-width: 767.98px) {
+    .hero-vid-box {
+        display: none !important;
+    }
+}
+/* Responsividad */
+@media (max-width: 991.98px) {
+  .navbar .menu-custom {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 90%;
+  }
+  .navbar .menu-custom .nav-link {
+    width: 100%;
+    text-align: center;
+    margin: 6px 0;  
+  }
+  .navbar .menu-custom ul {
+    text-align: left;
+    padding-left: 1.2rem;
+    width: 100%;
+  }
+  .navbar .networks-custom {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+}
