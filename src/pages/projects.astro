@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import "/src/styles/projects.css";
 ---
 
+<<<<<<< HEAD
 <BaseLayout currentPage="projects"> 
     <main class="container-fluid p-0">
         <!-- Mis Proyectos -->
@@ -39,3 +40,112 @@ import "/src/styles/projects.css";
 </BaseLayout>
 
 
+=======
+<BaseLayout currentPage="projects">
+    <main class="w-full overflow-hidden text-white">
+        <section class="my-projects py-40 px-6 md:px-16 text-white">
+            <!-- Título y descripción -->
+            <div class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="text-[#727fde]">Mis Proyectos</span> 👨‍💻
+                </h1>
+                <p class="text-gray-300 text-sm md:text-base leading-relaxed max-w-2xl mb-6">
+                    Algunos de mis proyectos desarrollados en diferentes áreas del desarrollo web y de software.  
+                Puedes filtrarlos según el tipo: Frontend, Backend u Otros.
+                </p>
+                <!-- Botones de filtrado -->
+                <div class="flex gap-3">
+                    <button class="filter-btn border border-[#727fde80] px-4 py-2 rounded-lg text-sm hover:bg-[#727fde30] transition-all duration-300"data-filter="all">
+                        Todos
+                    </button>
+                    <button class="filter-btn border border-[#727fde80] px-4 py-2 rounded-lg text-sm hover:bg-[#727fde30] transition-all duration-300" data-filter="frontend">
+                        Frontend
+                    </button>
+                    <button class="filter-btn border border-[#727fde80] px-4 py-2 rounded-lg text-sm hover:bg-[#727fde30] transition-all duration-300" data-filter="backend">
+                        Backend
+                    </button>
+                    <button class="filter-btn border border-[#727fde80] px-4 py-2 rounded-lg text-sm hover:bg-[#727fde30] transition-all duration-300" data-filter="otros">
+                        Otros
+                    </button>
+                </div>
+            </div>
+            <!-- Contenedor de proyectos -->
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
+                <!-- Proyecto Backend -->
+                <div class="project-card backend bg-[#0b0b1f] border border-[#727fde33] rounded-2xl shadow-[0_0_15px_#727fde33] overflow-hidden max-w-[380px] transition-all duration-500 hover:shadow-[0_0_25px_#727fde99]">
+                    <video src="videos/project1.mp4" autoplay muted loop playsinline class="w-full h-56 object-cover transition-all duration-500 hover:scale-[1.03]" aria-label="Video del proyecto Sistema de Reservas Online"></video>
+                    <div class="p-5 space-y-3">
+                        <h2 class="text-xl font-semibold text-[#bfc1ff]">
+                        Sistema de Reservas Online en Java
+                        </h2>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                        Programa de gestión de reservas en línea para el restaurante Long Horn. Administra mesas y horarios eficientemente, mejorando la experiencia del cliente y la organización interna.
+                        </p>
+                        <button class="inline-flex items-center gap-2 border border-[#727fdeb4] bg-[#2200493d] text-white px-5 py-2 rounded-lg shadow-[0_0_5px_#727fde86] font-semibold transition-all duration-300 hover:shadow-[0_0_15px_#727fde86] hover:opacity-80"
+                        title="Ver proyecto Sistema de Reservas Online">
+                            <i class="bx bx-link-external"></i> WebSite
+                        </button>
+                    </div>
+                </div>
+                <!-- Proyecto Frontend -->
+                <div class="project-card frontend bg-[#0b0b1f] border border-[#727fde33] rounded-2xl shadow-[0_0_15px_#727fde33] overflow-hidden max-w-[380px] transition-all duration-500 hover:shadow-[0_0_25px_#727fde99]">
+                    <video src="videos/project2.mp4" autoplay muted loop playsinline class="w-full h-56 object-cover transition-all duration-500 hover:scale-[1.03]" aria-label="Video del proyecto Dashboard Empresarial"
+                    ></video>
+                    <div class="p-5 space-y-3">
+                        <h2 class="text-xl font-semibold text-[#bfc1ff]">
+                            Dashboard Empresarial en Power BI
+                        </h2>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Dashboard interactivo en Power BI con KPIs, métricas y visualizaciones dinámicas que facilitan la toma de decisiones estratégicas para una empresa ficticia.
+                        </p>
+                        <button class="inline-flex items-center gap-2 border border-[#727fdeb4] bg-[#2200493d] text-white px-5 py-2 rounded-lg shadow-[0_0_5px_#727fde86] font-semibold transition-all duration-300 hover:shadow-[0_0_15px_#727fde86] hover:opacity-80"
+                        title="Ver proyecto Dashboard Empresarial">
+                            <i class="bx bx-link-external"></i> WebSite
+                        </button>
+                    </div>
+                </div>
+                <!-- Proyecto Otros -->
+                <div class="project-card otros bg-[#0b0b1f] border border-[#727fde33] rounded-2xl shadow-[0_0_15px_#727fde33] overflow-hidden max-w-[380px] transition-all duration-500 hover:shadow-[0_0_25px_#727fde99]">
+                    <video src="videos/project3.mp4" autoplay muted loop playsinline class="w-full h-56 object-cover transition-all duration-500 hover:scale-[1.03]" aria-label="Video del proyecto Otro"></video>
+                    <div class="p-5 space-y-3">
+                        <h2 class="text-xl font-semibold text-[#bfc1ff]">
+                            App Experimental en Python
+                        </h2>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Pequeña aplicación de consola creada en Python para practicar estructuras de datos y manipulación de archivos con enfoque educativo.
+                        </p>
+                        <button class="inline-flex items-center gap-2 border border-[#727fdeb4] bg-[#2200493d] text-white px-5 py-2 rounded-lg shadow-[0_0_5px_#727fde86] font-semibold transition-all duration-300 hover:shadow-[0_0_15px_#727fde86] hover:opacity-80"
+                        title="Ver proyecto App Experimental">
+                            <i class="bx bx-link-external"></i> WebSite
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Script de filtrado -->
+        <script>
+            const buttons = document.querySelectorAll('.filter-btn');
+            const projects = document.querySelectorAll('.project-card');
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const btn = button as HTMLElement; 
+                    const filter = btn.dataset.filter!;
+
+                    // Remover clases activas
+                    buttons.forEach(b => (b as HTMLElement).classList.remove('bg-[#727fdeb4]', 'text-white'));
+                    btn.classList.add('bg-[#727fdeb4]', 'text-white');
+
+                    projects.forEach(card => {
+                        const project = card as HTMLElement;
+                        if (filter === 'all' || project.classList.contains(filter)) {
+                            project.classList.remove('hidden');
+                        } else {
+                            project.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        </script>
+    </main>
+</BaseLayout>
+>>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)

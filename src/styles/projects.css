@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .my-projects {
     position: relative;
     width: 100%;
@@ -27,4 +28,24 @@
 .project-btn:hover {
     box-shadow: 0 0 15px #727fde86;
     opacity: 0.8;
+=======
+.project-card {
+  transition: all 0.4s ease;
+}
+
+.project-card.hidden {
+  opacity: 0;
+  transform: scale(0.97);
+  pointer-events: none;
+}
+
+.filter-btn.active {
+  background-color: #727fde;
+  box-shadow: 0 0 15px #727fdeaa;
+}
+
+/* Animación sutil en hover del video */
+.project-card video:hover {
+  transform: scale(1.03);
+>>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)
 }

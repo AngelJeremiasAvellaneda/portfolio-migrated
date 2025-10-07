@@ -1,1 +1,74 @@
+<<<<<<< HEAD
 @import "tailwindcss";
+=======
+@import "tailwindcss";
+
+/*Animacion de Degradado*/
+.gradient{
+    color: #008baa; /* fallback */
+    background:  linear-gradient(to right, #008baa, #7e42a7, #6600c5, #6070fd, #2a46ff, #0099ff, #008ead);
+    background-size: 400% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 8s ease infinite;
+}
+@keyframes animate-gradient {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+body{
+    background-color: #001f7c38;
+    color: white;
+}
+/* El main crece para ocupar el espacio disponible */
+main {
+    width: 100%;
+}
+
+/* ===== SCROLL-DOWN ===== */
+.scroll-down {
+  position: relative;
+  height: 50px;
+  width: 30px;
+  border: 2px solid #b5b5ff; /* color más visible sobre fondos oscuros */
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(181, 181, 255, 0.477);
+  transition: transform 0.2s ease;
+}
+.scroll-down:active {
+  transform: translateY(5px);
+}
+.scroll-down::before,
+.scroll-down::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  border: 2px solid #b5b5ff;
+  border-top: transparent;
+  border-left: transparent;
+  transform: translate(-50%, -100%) rotate(45deg);
+  animation: scroll-down 2s ease-in-out infinite;
+}
+.scroll-down::before {
+  animation-delay: 0.5s;
+}
+@keyframes scroll-down {
+  0% {
+    top: 20%;
+    opacity: 0;
+  }
+  30%, 60% {
+    opacity: 1;
+  }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
+}
+
+
+>>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)

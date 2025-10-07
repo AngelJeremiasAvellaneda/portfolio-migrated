@@ -1,10 +1,15 @@
 ---
+<<<<<<< HEAD
 import BaseLayout from "../layouts/BaseLayout.astro";
+=======
+import BaseLayout from "@layouts/BaseLayout.astro";
+>>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)
 import Splash from "../pages/Splash.astro";
 import "/src/styles/start.css";
 ---
 
 <BaseLayout currentPage="home">
+<<<<<<< HEAD
     <Splash />
     <main class="container-fluid p-0">
         <section class="hero position-relative d-flex align-items-center min-vh-100 overflow-hidden">
@@ -124,4 +129,101 @@ import "/src/styles/start.css";
         </section>
     </main>
     <script src="/scripts/start.js" defer></script>
+=======
+  <Splash />
+  <main class="w-full p-0">
+    <!-- Hero Section -->
+    <section class="relative flex items-center min-h-screen overflow-visible pt-20 md:pt-28">
+        <div class="container mx-auto relative px-6 md:px-10">
+            <div class="flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-10">
+                <!-- Texto Hero -->
+                <div class="text-center md:text-left md:w-1/2 z-20 space-y-6">
+                    <div class="w-[300px] max-w-[90%] text-[#727fde] border border-[#727fde77] bg-[#2200493d] shadow-[0_0_5px_#727fde88] inline-block rounded-md px-4 py-2">
+                        <i class="bx bxl-sketch"></i> Full-Stack Developer Portfolio
+                    </div>
+                    <h1 class="font-bold text-4xl md:text-5xl leading-tight">
+                        Brindando <span class="gradient">la mejor</span> Experiencia de
+                        <span class="gradient">Proyectos</span>
+                    </h1>
+                    <p class="text-lg text-gray-300">
+                        Apasionado por el Machine Learning, desarrollo de software y análisis de datos,
+                        con interés en el desarrollo web accesible y responsivo.
+                    </p>
+                    <div class="text-center md:text-left">
+                    <a href="/contact" class="border border-[#727fdeb4] bg-[#2200493d] shadow-[0_0_5px_#727fde86] text-white px-5 py-2 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:shadow-[0_0_15px_#727fde86] hover:opacity-80">
+                        <i class="bx bx-send"></i> Contact Me
+                    </a>
+                    </div>
+                </div>
+                <!-- Video Hero -->
+                <div class="hero-vid-box hidden md:block">
+                    <video autoplay loop muted playsinline class=""></video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Scroll Down -->
+    <div class="scroll-down relative -mt-10 -translate-y-30 left-1/2 -translate-x-1/2 md:block" data-target="skills"></div>
+    <!-- Herramientas -->
+    <section id="skills" class="py-20 mt-10">
+      <div class="container mx-auto text-center">
+        <h2 class="pt-10 text-3xl md:text-4xl font-semibold">Mis Herramientas 🛠️</h2>
+        <p class="text-lg text-gray-300 mb-12">
+          Estas son algunas de las herramientas que uso para desarrollar, diseñar y organizar mis proyectos.
+        </p>
+
+        <!-- Tools chain -->
+        <div class="flex flex-wrap justify-center items-center gap-14 mb-10">
+          {[
+            { src: 'images/vscode.png', name: 'VS Code' },
+            { src: 'images/github.png', name: 'GitHub' },
+            { src: 'images/git.png', name: 'Git' },
+            { src: 'images/figma.png', name: 'Figma' },
+            { src: 'images/mysqlworkbench.png', name: 'MySqlWorkBench' },
+          ].map((tool) => (
+            <div class="flex flex-col items-center relative">
+              <div
+                class="w-20 h-20 border-2 border-[#727fde] rounded-full flex items-center justify-center bg-[rgba(34,0,73,0.2)] shadow-[0_0_15px_rgba(255,255,255,0.3)] transition-all duration-300 hover:shadow-[0_0_20px_#ffffff,0_0_25px_#727fde] hover:scale-110"
+              >
+                <img src={tool.src} alt={tool.name} class="w-1/2 h-1/2" />
+              </div>
+              <div class="mt-2 font-semibold text-white text-sm text-shadow">
+                {tool.name}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Tecnologías -->
+        <h2 class="mt-10 mb-3 text-3xl md:text-4xl font-semibold">Tecnologías que manejo 💻</h2>
+        <p class="text-lg text-gray-300 mb-10">
+          Estas son algunas de las tecnologías y lenguajes que uso para crear mis proyectos web y aplicaciones.
+        </p>
+
+        <!-- Slider -->
+        <div class="slider-wrapper w-[60%] mx-auto overflow-hidden relative h-[160px]">
+            <div class="slider-track flex gap-10 animate-scroll">
+                {[
+                'html', 'css', 'javascript', 'react', 'python', 'java',
+                'html', 'css', 'javascript', 'react', 'python', 'java'
+                ].map((tech) => (
+                <div class="skill-card relative w-[100px] h-[100px] shrink-0 cursor-pointer">
+                    <img
+                    src={`images/${tech}.png`}
+                    alt={tech}
+                    class="mt-4 w-full h-full object-contain rounded-xl filter grayscale transition-all duration-300 hover:grayscale-0 hover:scale-110 hover:opacity-100"
+                    />
+                    <div class="skill-msg absolute bottom-[-30px] left-1/2 -translate-x-1/2 bg-[rgba(34,0,73,0.9)] px-2 py-1 rounded-lg text-[14px] font-semibold text-[#727fde] opacity-0 transition-all duration-300 group-hover:opacity-100">
+                    {tech.toUpperCase()}
+                    </div>
+                </div>
+                ))}
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="/scripts/start.js" defer></script>
+>>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)
 </BaseLayout>

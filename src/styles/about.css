@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ===== INFO SECTION ===== */
 .info-section-custom {
   display: flex;
@@ -67,3 +68,26 @@
         min-height: 400px;
     }
 }
+=======
+
+/* ===== CARDS ===== */
+.card-custom {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(114, 127, 222, 0.3);
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(114, 127, 222, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(114, 127, 222, 0.3);
+}
+
+/* ===== GRADIENT TEXT ===== */
+.gradient {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+>>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)
