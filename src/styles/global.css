@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 @import "tailwindcss";
-=======
-@import "tailwindcss";
-
-/*Animacion de Degradado*/
 .gradient{
-    color: #008baa; /* fallback */
+    color: #008baa; 
     background:  linear-gradient(to right, #008baa, #7e42a7, #6600c5, #6070fd, #2a46ff, #0099ff, #008ead);
     background-size: 400% 100%;
     background-clip: text;
@@ -21,17 +16,14 @@ body{
     background-color: #001f7c38;
     color: white;
 }
-/* El main crece para ocupar el espacio disponible */
 main {
     width: 100%;
 }
-
-/* ===== SCROLL-DOWN ===== */
 .scroll-down {
   position: relative;
   height: 50px;
   width: 30px;
-  border: 2px solid #b5b5ff; /* color más visible sobre fondos oscuros */
+  border: 2px solid #b5b5ff; 
   border-radius: 50px;
   cursor: pointer;
   box-shadow: 0 0 15px rgba(181, 181, 255, 0.477);
@@ -69,6 +61,3 @@ main {
     opacity: 0;
   }
 }
-
-
->>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)

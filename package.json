@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "my-astro-app",
-=======
   "name": "portfolio-migrated",
->>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -13,11 +9,6 @@
     "astro": "astro"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.13.11",
-    "tailwindcss": "^4.1.13"
-=======
     "@tailwindcss/vite": "^4.1.14"
   },
   "devDependencies": {
@@ -26,6 +17,5 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.14"
->>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)
   }
 }

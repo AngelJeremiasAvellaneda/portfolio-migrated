@@ -2,47 +2,6 @@
 // Header.astro
 const { currentPage } = Astro.props;
 ---
-<<<<<<< HEAD
-<header>
-  <nav class="navbar navbar-expand-lg sticky-top" style="z-index:1050; background-color: rgba(0,0,0,0.3);">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand d-flex align-items-center" href="/index">
-        <img src="/images/angelcode.png" alt="logo" width="30" height="30" class="me-2" />
-        <strong class="h4 text-light"><span class="fw-bold gradient">Angel</span>Code</strong>
-      </a>
-      <!-- Boton hamgurguesa -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Navegación -->
-        <ul class="navbar-nav mx-auto px-4 py-2 menu-custom">
-          <li class="nav-item">
-            <a class={`nav-link ${currentPage === 'home' ? 'active' : ''}`} href="/">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class={`nav-link ${currentPage === 'about' ? 'active' : ''}`} href="/about">Sobre mí</a>
-          </li>
-          <li class="nav-item">
-            <a class={`nav-link ${currentPage === 'projects' ? 'active' : ''}`} href="/projects">Proyectos</a>
-          </li>
-          <li class="nav-item">
-            <a class={`nav-link ${currentPage === 'contact' ? 'active' : ''}`} href="/contact">Contacto</a>
-          </li>
-        </ul>
-        <!-- Redes Sociales -->
-        <div class="d-flex justify-content-center mt-3 mt-lg-0 networks-custom mx-5">
-          <a href="https://www.instagram.com/angeljeremias05/" class="text-light me-2"><i class='bx bxl-instagram'></i></a>
-          <a href="https://github.com/AngelJeremiasAvellaneda" class="text-light me-2"><i class='bx bxl-github'></i></a>
-          <a href="https://www.linkedin.com/in/angel-addair-jeremias-avellaneda" class="text-light"><i class='bx bxl-linkedin'></i></a>
-        </div>
-      </div>
-    </div>
-  </nav>
-</header>
-=======
 <header class="fixed top-0 left-0 w-full bg-black/30 backdrop-blur-sm z-50">
   <nav class="mx-auto flex max-w-7xl items-center justify-between p-4 navbar">
     <!-- LOGO + TÍTULO -->
@@ -120,4 +79,3 @@ const { currentPage } = Astro.props;
     }
   });
 </script>
->>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)

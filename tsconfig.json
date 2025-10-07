@@ -1,11 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
-<<<<<<< HEAD
-  "exclude": ["dist"]
-=======
   "exclude": ["dist"],
-
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -14,5 +10,4 @@
       "@lib/*": ["src/lib/*"],
     }
   }
->>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)
 }

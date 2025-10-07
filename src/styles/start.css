@@ -1,236 +1,27 @@
-<<<<<<< HEAD
-.info-custom{
-    width: 300px;
-    max-width: 90%;
-    color: #727fde;
-    border: 1px solid #727fde77;
-    background-color: #2200493d;
-    box-shadow: 0 0 5px #727fde88;
-}
-@media (max-width: 767.98px) {
-    .info-custom {
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-.button-custom {
-    border: 1px solid #727fdeb4;
-    background-color: #2200493d;
-    box-shadow: 0 0 5px #727fde86;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: 0.3s;
-    text-decoration: none;
-}
-.button-custom:hover {
-    box-shadow: 0 0 15px #727fde86;
-    opacity: 0.8;
-    text-decoration: none;
-}
-.hero-vid-box{
-    position: absolute; 
-    right: 0%;
-}
-.hero-vid-box video{
-    height: 900px;
-    mix-blend-mode: lighten;
-}
-/* ---- Herramientas (static nodes) ---- */
-.tools-chain {
-    display: flex;
-    align-items: center;
-    gap: 60px; 
-    justify-content: center; 
-}
-/* Cada nodo */
-.tool-node {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-/* Icono circular con borde y brillo */
-.tool-icon {
-    width: 80px;
-    height: 80px;
-    border: 2px solid #727fde;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(34,0,73,0.2);
-    box-shadow: 0 0 15px rgba(255,255,255,0.3);
-    transition: all 0.3s ease;
-}
-.tool-icon img {
-    width: 50%;
-    height: 50%;
-}
-/* Hover brillante */
-.tool-icon:hover {
-    box-shadow: 0 0 20px #ffffff, 0 0 25px #727fde;
-    transform: scale(1.1);
-}
-/* Nombre debajo del nodo */
-.tool-name {
-    margin-top: 8px;
-    font-weight: 600;
-    color: #ffffff;
-    font-size: 0.9rem;
-    text-shadow: 1px 1px 2px #000000;
-}
-/* Tecnologias */
-.skills-section {
-    padding: 80px 0; 
-    background: rgba(34,0,73,0.05); 
-}
-.skills-section h2 {
-    font-size: 2.5rem;
-}
-.skills-section p {
-    font-size: 1.1rem;
-    max-width: 700px;
-    margin: 0 auto 40px;
-    color: #727fdeaa;
-}
-/* Slider */
-.slider-container {
-    width: 60%;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    height: 160px;
-    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-}
-.slider {
-    display: flex;
-    gap: 20px;
-    width: max-content;
-    transform: translateX(0); 
-}
-/* Cada skill / imagen */
-.skill-card {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    flex-shrink: 0;
-    cursor: pointer;
-}
-/* Imagen del skill */
-.skill-img {
-    margin-top: 1rem;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 15px;
-    filter: grayscale(1);
-    transition: all 0.3s ease, opacity 0.5s ease;
-}
-/* Hover: efecto zoom + color */
-.skill-card:hover .skill-img {
-    filter: grayscale(0);
-    transform: scale(1.1);
-    opacity: 1;
-}
-/* Tooltip / Nombre del skill */
-.skill-msg {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%) scale(0);
-    background: rgba(34,0,73,0.9);
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #727fde;
-    white-space: nowrap;
-    text-align: center;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-.skill-card:hover .skill-msg {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-}
-/* Fade lateral */
-.slider-container::before,
-.slider-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    width: 10%;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-.slider-container::before {
-    left: 0;
-}
-.slider-container::after {
-    right: 0;
-}
-/* Responsive para móviles */
-@media screen and (max-width: 768px) {
-    .slider-container {
-        width: 90%;
-        height: auto;
-        min-height: 130px;
-    }
-    .skill-card {
-        width: 100px;
-        height: 100px;
-    }
-    .skills-section h2 {
-        font-size: 2rem;
-    }
-    .skills-section p {
-        font-size: 1rem;
-    }
-}
-=======
-
-/*  Gradiente general */
 .gradient {
   background: linear-gradient(to right, #727fde, #00f5ff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-/* Sombra de texto */
 .text-shadow {
   text-shadow: 1px 1px 2px #000000;
 }
-
-/* Efecto de video */
 .hero-vid-box video {
   height: 900px;
   mix-blend-mode: lighten;
 }
-
-/* Contenedor con máscara lateral (fade) */
 .slider-wrapper {
   position: relative;
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
-
-/* Pista del carrusel con animación infinita */
 .slider-track {
   display: flex;
   width: max-content;
   animation: scroll-infinite 25s linear infinite;
 }
-
-/* Movimiento continuo y suave */
 @keyframes scroll-infinite {
   from {
     transform: translateX(0);
@@ -239,12 +30,9 @@
     transform: translateX(-50%);
   }
 }
-
-/* Pausa el desplazamiento al pasar el cursor */
 .slider-wrapper:hover .slider-track {
   animation-play-state: paused;
 }
-/* Cada tarjeta de skill */
 .skill-card {
   position: relative;
   width: 100px;
@@ -252,8 +40,6 @@
   flex-shrink: 0;
   cursor: pointer;
 }
-
-/* Tooltip / Nombre del skill */
 .skill-msg {
   position: absolute;
   bottom: -30px;
@@ -270,13 +56,10 @@
   opacity: 0;
   transition: all 0.3s ease;
 }
-
-/* Mostrar nombre al hacer hover */
 .skill-card:hover .skill-msg {
   opacity: 1;
   transform: translateX(0%) scale(1);
 }
-/* Responsividad */
 @media screen and (max-width: 768px) {
   .slider-wrapper {
     width: 90%;
@@ -284,4 +67,3 @@
     min-height: 130px;
   }
 }
->>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)

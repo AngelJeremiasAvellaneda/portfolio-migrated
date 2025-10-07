@@ -1,5 +1,7 @@
 import easingUtils from "https://esm.sh/easing-utils";
+
 console.log("Funcionando Splash");
+
 class AHole extends HTMLElement {
   connectedCallback() {
     this.canvas = this.querySelector(".js-canvas");
@@ -13,35 +15,37 @@ class AHole extends HTMLElement {
     this.bindEvents();
     requestAnimationFrame(this.tick.bind(this));
   }
+
   bindEvents() {
     window.addEventListener("resize", this.onResize.bind(this));
   }
+
   onResize() {
     this.setSize();
     this.setDiscs();
     this.setLines();
     this.setParticles();
   }
+
   setSize() {
     this.rect = this.getBoundingClientRect();
-  
+
     // Esperar a que width y height sean válidos
     if (this.rect.width === 0 || this.rect.height === 0) {
-      // Intenta llamar setSize() de nuevo en un frame para esperar layout
       requestAnimationFrame(() => this.setSize());
       return;
     }
-  
+
     this.render = {
       width: this.rect.width,
       height: this.rect.height,
       dpi: window.devicePixelRatio,
     };
-  
+
     this.canvas.width = this.render.width * this.render.dpi;
     this.canvas.height = this.render.height * this.render.dpi;
   }
-  
+
   setDiscs() {
     const { width, height } = this.rect;
     this.discs = [];
@@ -96,27 +100,30 @@ class AHole extends HTMLElement {
 
   setLines() {
     const { width, height } = this.rect;
-    this.lines = [];
 
+    if (width === 0 || height === 0) {
+      // Espera a que el layout tenga tamaño
+      requestAnimationFrame(() => this.setLines());
+      return;
+    }
+
+    this.lines = [];
     const totalLines = 100;
     const linesAngle = (Math.PI * 2) / totalLines;
 
-    for (let i = 0; i < totalLines; i++) {
-      this.lines.push([]);
-    }
+    for (let i = 0; i < totalLines; i++) this.lines.push([]);
 
     this.discs.forEach((disc) => {
       for (let i = 0; i < totalLines; i++) {
         const angle = i * linesAngle;
-        const p = {
+        this.lines[i].push({
           x: disc.x + Math.cos(angle) * disc.w,
           y: disc.y + Math.sin(angle) * disc.h,
-        };
-        this.lines[i].push(p);
+        });
       }
     });
 
-    this.linesCanvas = new OffscreenCanvas(width, height);
+    this.linesCanvas = new OffscreenCanvas(Math.max(1, width), Math.max(1, height));
     const ctx = this.linesCanvas.getContext("2d");
 
     this.lines.forEach((line) => {
@@ -232,6 +239,7 @@ class AHole extends HTMLElement {
 
   drawLines() {
     const { ctx, linesCanvas } = this;
+    if (!linesCanvas || linesCanvas.width === 0 || linesCanvas.height === 0) return;
     ctx.drawImage(linesCanvas, 0, 0);
   }
 
@@ -290,7 +298,9 @@ class AHole extends HTMLElement {
     requestAnimationFrame(this.tick.bind(this));
   }
 }
+
 customElements.define("a-hole", AHole);
+
 // Splash control (solo uno)
 window.addEventListener("load", () => {
   const splash = document.querySelector("a-hole");

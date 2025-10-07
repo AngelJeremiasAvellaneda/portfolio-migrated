@@ -1,135 +1,9 @@
 ---
-<<<<<<< HEAD
-import BaseLayout from "../layouts/BaseLayout.astro";
-=======
 import BaseLayout from "@layouts/BaseLayout.astro";
->>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)
 import Splash from "../pages/Splash.astro";
 import "/src/styles/start.css";
 ---
-
 <BaseLayout currentPage="home">
-<<<<<<< HEAD
-    <Splash />
-    <main class="container-fluid p-0">
-        <section class="hero position-relative d-flex align-items-center min-vh-100 overflow-hidden">
-            <div class="container position-relative">
-                <div class="row align-items-center">
-                    <!-- Texto Hero -->
-                    <div class="col-md-6 text-md-start text-center position-relative">
-                        <div class="mb-3 p-2 rounded-pill info-custom"> 
-                            <i class='bx bxl-sketch'></i> Full-Stack Developer Portfolio
-                        </div>
-                        <h1 class="fw-bold display-4 mt-3 mb-4">
-                            Brindando <span class="gradient">la mejor</span> Experiencia de <span class="gradient">Proyectos</span>
-                        </h1>
-                        <p class="lead mb-4">
-                            Apasionado por el Machine Learning, desarrollo de software y análisis de datos,
-                            con interés en el desarrollo web accesible y responsivo.
-                        </p>
-                        <div class="text-center mt-3">
-                            <a href="contact.html" class="btn btn-outline-light btn-lg button-custom">
-                                <i class='bx bx-send'></i> Contact Me
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Video Hero a la derecha -->
-            <div class="hero-vid-box d-none d-md-block">
-                <video autoplay loop muted playsinline></video>
-            </div>
-        </section>
-        <!-- Scroll Down -->
-        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-5 scroll-down d-none d-md-block" data-target="skills"></div>
-        <!-- Sección habilidades -->
-        <section class="tools-section py-5 mt-5" id="skills">
-            <div class="container text-center">
-                <h2 class="pt-5">Mis Herramientas 🛠️</h2>
-                <p class="lead">
-                    Estas son algunas de las herramientas que uso para desarrollar, diseñar y organizar mis proyectos.
-                </p>
-                <div class="tools-chain d-flex justify-content-center align-items-center flex-wrap gap-4 mb-5">
-                    <!-- VS Code -->
-                    <div class="tool-node">
-                        <div class="tool-icon">
-                            <img src="images/vscode.png" alt="VS Code">
-                        </div>
-                        <div class="tool-name">VS Code</div>
-                    </div>
-                    <!-- GitHub -->
-                    <div class="tool-node">
-                        <div class="tool-icon">
-                            <img src="images/github.png" alt="GitHub">
-                        </div>
-                        <div class="tool-name">GitHub</div>
-                    </div>
-                    <!-- Git -->
-                    <div class="tool-node">
-                        <div class="tool-icon">
-                            <img src="images/git.png" alt="Git">
-                        </div>
-                        <div class="tool-name">Git</div>
-                    </div>
-                    <!-- Figma -->
-                    <div class="tool-node">
-                        <div class="tool-icon">
-                            <img src="images/figma.png" alt="Figma">
-                        </div>
-                        <div class="tool-name">Figma</div>
-                    </div>
-                    <!-- MySqlWorkBench -->
-                    <div class="tool-node">
-                        <div class="tool-icon">
-                            <img src="images/mysqlworkbench.png" alt="MySqlWorkBench">
-                        </div>
-                        <div class="tool-name">MySqlWorkBench</div>
-                    </div>
-                </div>
-                <!-- Slider Tecnologías -->
-                <h2 class="mt-5 mb-3">Tecnologías que manejo 💻</h2>
-                <p class="lead mb-5">
-                    Estas son algunas de las tecnologías y lenguajes que uso para crear mis proyectos web y aplicaciones.
-                </p>
-                <div class="slider-container">
-                    <div class="slider">
-                        <!-- Tecnología 1 -->
-                        <div class="skill-card">
-                            <img src="images/html.png" alt="HTML" class="skill-img">
-                            <div class="skill-msg">HTML</div>
-                        </div>
-                        <!-- Tecnología 2 -->
-                        <div class="skill-card">
-                            <img src="images/css.png" alt="CSS" class="skill-img">
-                            <div class="skill-msg">CSS</div>
-                        </div>
-                        <!-- Tecnología 3 -->
-                        <div class="skill-card">
-                            <img src="images/javascript.png" alt="JavaScript" class="skill-img">
-                            <div class="skill-msg">JavaScript</div>
-                        </div>
-                        <!-- Tecnología 4 -->
-                        <div class="skill-card">
-                            <img src="images/react.png" alt="React" class="skill-img">
-                            <div class="skill-msg">React</div>
-                        </div>
-                        <!-- Tecnología 5 -->
-                        <div class="skill-card">
-                            <img src="images/python.png" alt="Python" class="skill-img">
-                            <div class="skill-msg">Python</div>
-                        </div>
-                        <!-- Tecnología 6 -->
-                        <div class="skill-card">
-                            <img src="images/java.png" alt="Java" class="skill-img">
-                            <div class="skill-msg">Java</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <script src="/scripts/start.js" defer></script>
-=======
   <Splash />
   <main class="w-full p-0">
     <!-- Hero Section -->
@@ -150,9 +24,9 @@ import "/src/styles/start.css";
                         con interés en el desarrollo web accesible y responsivo.
                     </p>
                     <div class="text-center md:text-left">
-                    <a href="/contact" class="border border-[#727fdeb4] bg-[#2200493d] shadow-[0_0_5px_#727fde86] text-white px-5 py-2 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:shadow-[0_0_15px_#727fde86] hover:opacity-80">
-                        <i class="bx bx-send"></i> Contact Me
-                    </a>
+                      <a href="/contact" class="border border-[#727fdeb4] bg-[#2200493d] shadow-[0_0_5px_#727fde86] text-white px-5 py-2 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:shadow-[0_0_15px_#727fde86] hover:opacity-80">
+                          <i class="bx bx-send"></i> Contact Me
+                      </a>
                     </div>
                 </div>
                 <!-- Video Hero -->
@@ -171,7 +45,6 @@ import "/src/styles/start.css";
         <p class="text-lg text-gray-300 mb-12">
           Estas son algunas de las herramientas que uso para desarrollar, diseñar y organizar mis proyectos.
         </p>
-
         <!-- Tools chain -->
         <div class="flex flex-wrap justify-center items-center gap-14 mb-10">
           {[
@@ -193,13 +66,11 @@ import "/src/styles/start.css";
             </div>
           ))}
         </div>
-
         <!-- Tecnologías -->
         <h2 class="mt-10 mb-3 text-3xl md:text-4xl font-semibold">Tecnologías que manejo 💻</h2>
         <p class="text-lg text-gray-300 mb-10">
           Estas son algunas de las tecnologías y lenguajes que uso para crear mis proyectos web y aplicaciones.
         </p>
-
         <!-- Slider -->
         <div class="slider-wrapper w-[60%] mx-auto overflow-hidden relative h-[160px]">
             <div class="slider-track flex gap-10 animate-scroll">
@@ -223,7 +94,4 @@ import "/src/styles/start.css";
       </div>
     </section>
   </main>
-
-  <script src="/scripts/start.js" defer></script>
->>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)
 </BaseLayout>

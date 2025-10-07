@@ -1,40 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-<<<<<<< HEAD
-import "/src/styles/contact.css";
----
-
-<BaseLayout currentPage="contact"> 
-    <main class="container-fluid p-0"> 
-        <section class="contact-section container py-5">
-            <h1 class="section-title text-center mb-5">Contáctame 📬</h1>
-            <div class="row justify-content-center">
-                <!-- Formulario -->
-                <div class="col-md-6">
-                    <form class="contact-form d-flex flex-column gap-3">
-                        <input type="text" class="form-control" placeholder="Nombre" required>
-                        <input type="email" class="form-control" placeholder="Correo electrónico" required>
-                        <textarea class="form-control" rows="5" placeholder="Mensaje" required></textarea>
-                        <button type="submit" class="btn project-btn align-self-start">
-                            <i class='bx bx-send'></i> Enviar por WhatsApp
-                        </button>
-                    </form>
-                </div>
-                <!-- Información adicional -->
-                <div class="col-md-4 text-light mt-4 mt-md-0">
-                    <p><i class='bx bx-envelope'></i> 
-                        <span class="copy-email" style="cursor:pointer; text-decoration:underline;">
-                            75193774@continental.edu.pe
-                        </span>
-                    </p>
-                    <p><i class='bx bx-phone'></i> 
-                        <a href="https://wa.me/51956895281" target="_blank" class="text-light text-decoration-none">
-                            +51 956 895 281
-                        </a>
-                    </p>
-                    <p><i class='bx bxl-linkedin'></i> 
-                        <a href="https://www.linkedin.com/in/angel-addair-jeremias-avellaneda" target="_blank" class="text-light text-decoration-none">
-=======
 ---
 
 <BaseLayout currentPage="contact">
@@ -64,7 +29,6 @@ import "/src/styles/contact.css";
                     <p class="flex items-center gap-2">
                         <i class="bx bxl-linkedin text-[#727fde] text-xl"></i>
                         <a href="https://www.linkedin.com/in/angel-addair-jeremias-avellaneda" target="_blank" class="hover:text-[#bfc1ff] transition-all">
->>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)
                             LinkedIn
                         </a>
                     </p>
@@ -72,12 +36,5 @@ import "/src/styles/contact.css";
             </div>
         </section>
     </main>
-<<<<<<< HEAD
-    <script src="/scripts/contact.js" defer></script>
-</BaseLayout>
-
-
-=======
     <script src="/src/scripts/contact.js" defer></script>
 </BaseLayout>
->>>>>>> 95f924c (Segundo commit - Migrando de Boostrap a Tailwind)
